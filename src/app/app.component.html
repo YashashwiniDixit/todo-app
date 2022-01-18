@@ -1,18 +1,30 @@
-<div style="text-align:center">
-  <h1>
-    Todo CRUD App - Using  Two Way Data binding
-  </h1>
-</div>
-<div class="taskForm">
-    <label>{{selectedtask.taskID == 0 ? "Add Task":"Update Task"}}</label><br/>
-  <input [(ngModel)]="selectedtask.title" class="textBox" placeholder="Title"><br/>
-  <textarea [(ngModel)]="selectedtask.description" class="textBox" placeholder="Description" rows="4" cols="50"></textarea><br/>
-  <input [(ngModel)]="selectedtask.datetime" type="datetime-local"><br/>
-  <button (click)="AddorEdit()" class="btnsubmit">Submit</button>
-  <button *ngIf="selectedtask.taskID!=0" (click)="Delete()" class="btndelete">Delete</button>
-</div>
-<ul class="taskList">
-<li *ngFor="let task of taskCollection" (click)="OPenForEdit(task)" [class.selected]="task==selectedtask">
-<span class="badge">{{task.taskID}}</span>{{task.title}} - {{task.description}} - {{task.datetime}}
-</li>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+</head>
+<body>
+  <div style="text-align:center">
+    <h1>
+      Todo CRUD App - Using  Two Way Data binding
+    </h1>
+  </div>
+  <div class="taskForm">
+      <label>{{selectedtask.taskID == 0 ? "Add Task":"Update Task"}}</label><br/>
+    <input [(ngModel)]="selectedtask.title" class="textBox" placeholder="Title"><br/>
+    <textarea [(ngModel)]="selectedtask.description" class="textBox" placeholder="Description" rows="4" cols="50"></textarea><br/>
+    <input [(ngModel)]="selectedtask.datetime" type="datetime-local"><br/>
+    <button (click)="AddorEdit()" class="btnsubmit">Submit</button>
+    <button *ngIf="selectedtask.taskID!=0" (click)="Delete()" class="btndelete">Delete</button>
+  </div>
+  <ul class="taskList">
+  <li *ngFor="let task of taskCollection" (click)="OPenForEdit(task)" [class.selected]="task==selectedtask">
+  <span class="badge">{{task.taskID}}</span> <span style="font-style: italic;">{{task.title}} </span>- <span style="font-weight: bold;">{{task.datetime}}</span> <br/>
+  <span style="margin-left: 0.8em;">{{task.description}} </span>
+  </li>
+  </ul>
+</body>
+</html>

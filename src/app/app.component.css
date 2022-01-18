@@ -1,24 +1,14 @@
+
 .taskForm{
-  margin: 8px;
-  border-radius: 4px;
+  margin: auto;
+  width: 50%;
   padding: 10px;
-  display: inline-block;
-  /* padding-left: 500px; */
+  text-align: center;
+  background-image: linear-gradient(rgb(174, 0, 255), rgb(0, 247, 255))
 }
-/* input.textBox {
-  padding: 0;
-  height: 30px;
-  position: relative;
-  left: 0;
-  outline: none;
-  border: 1px solid #cdcdcd;
-  border-color: rgba(0,0,0,.15);
-  background-color: white;
-  font-size: 16px;
-  padding: 0px 5px;
-} */
-input,label{
+input,label,textarea{
   margin:  5px 0px;
+  text-align: center;
 }
 .btnsubmit {
   background-color: rgb(24, 207, 115);
@@ -47,17 +37,17 @@ input,label{
   border-radius: 4px;
 }
 .taskList {
-    margin: 0 0 2em 0;
+    margin: auto;
     list-style-type: none;
     padding: 0;
-    width: 50em;
+    width: 50%;
     /* padding-left: 500px; */
   }
 .taskList li {
     cursor: pointer;
     position: relative;
     left: 0;
-    background-color: palevioletred;
+    background-color: rgb(166, 131, 196);
     margin: .5em;
     padding: .3em 0;
     height: auto;
@@ -81,14 +71,14 @@ input,label{
     font-size: small;
     color: white;
     padding: 0.8em 0.7em 0 0.7em;
-    background-color:  rgb(24, 207, 115);
+    background-color:  rgb(207, 24, 24);
     line-height: 1em;
     position: relative;
     left: -1px;
     top: -4px;
     height: 1.8em;
-    margin-right: .8em;
-    border-radius: 4px 0 0 4px;
+    margin: .8em .8em 0.8em .8em;
+    border-radius: 4px 4px 4px 4px;
   }
   .selected {
       background-color: black !important;
